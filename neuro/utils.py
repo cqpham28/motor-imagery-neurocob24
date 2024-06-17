@@ -11,8 +11,7 @@ def get_data(method="SparseFBCSP+LDA"):
     for group in ["G1", "G2", "G3"]:
 
         # read df
-        df = pd.read_csv(os.path.join(PATH_STAT,
-                        f"df_benchmark_v2_{group}.csv"))
+        df = pd.read_csv(f"data/df_benchmark_v2_{group}.csv")
         
         # crop time seg, method
         df = df.loc[df["method"] == method] \
